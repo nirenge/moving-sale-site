@@ -22,6 +22,11 @@ function renderCard(product) {
         מעוניינ/ת בפריט
       </a>`;
 
+  const dimensionsRow =
+    product.dimensions && product.dimensions.trim()
+      ? `<li><span class="card__label">מידות:</span> ${escapeHtml(product.dimensions)}</li>`
+      : "";
+
   return `
     <article class="card${soldClass}">
       <div
@@ -45,7 +50,7 @@ function renderCard(product) {
         <h3 class="card__title">${escapeHtml(product.name)}</h3>
         <p class="card__price">${escapeHtml(product.price)}</p>
         <ul class="card__details">
-          <li><span class="card__label">מידות:</span> ${escapeHtml(product.dimensions)}</li>
+          ${dimensionsRow}
           <li><span class="card__label">מצב:</span> ${escapeHtml(product.condition)}</li>
           <li><span class="card__label">זמין מ:</span> ${escapeHtml(product.availableDate)}</li>
         </ul>
