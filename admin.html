@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ניהול מוצרים</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="admin-header">
+    <div class="admin-header__inner">
+      <h1>⚙️ ניהול מוצרים</h1>
+      <a href="index.html">← חזרה לעמוד המכירה</a>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <p class="admin-note">
+      השינויים כאן נשמרים אוטומטית <strong>בדפדפן הזה בלבד</strong> (טיוטה מקומית),
+      כדי לאפשר לך לראות תצוגה מקדימה מיידית בעמוד המכירה. כדי שהשינויים יופיעו אצל
+      כל מי שנכנס לאתר, יש ללחוץ על <strong>״הורדת קובץ products.js מעודכן״</strong> למטה,
+      ולהחליף איתו את הקובץ <code>js/products.js</code> בפרויקט (ואז להעלות מחדש ל-GitHub Pages / Netlify).
+    </p>
+
+    <div class="admin-actions">
+      <button id="btn-add" class="btn btn--primary btn--small">+ הוספת מוצר חדש</button>
+      <button id="btn-reset" class="btn btn--outline btn--small">איפוס טיוטה לנתונים המקוריים</button>
+    </div>
+
+    <section id="admin-list" class="admin-list"></section>
+
+    <section class="export-panel">
+      <h2>ייצוא הקובץ המעודכן</h2>
+      <p>לחיצה על הכפתור תוריד קובץ <code>products.js</code> מוכן להחלפה בתוך תיקיית <code>js/</code> של הפרויקט.</p>
+      <button id="btn-export" class="btn btn--primary">⬇️ הורדת קובץ products.js מעודכן</button>
+      <p style="margin-top:14px;">או להעתקה ידנית:</p>
+      <textarea id="export-preview" readonly></textarea>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

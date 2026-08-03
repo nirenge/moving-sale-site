@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>עוברים דירה - נפרדים מציוד</title>
+  <meta name="description" content="פריטי בית איכותיים למכירה בעקבות מעבר דירה" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">🏠 עוברים דירה - נפרדים מציוד</h1>
+      <p class="hero__subtitle">
+        בעקבות מעבר דירה אנחנו מוכרים מגוון פריטים במצב מצוין. מוזמנים להציץ וליצור קשר 😊
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="products-grid" class="grid" aria-label="רשימת מוצרים">
+      <!-- המוצרים מוזרקים כאן דינמית ע"י js/app.js -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>נבנה באהבה לקראת מעבר דירה 📦</p>
+  </footer>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <button type="button" class="lightbox__close" aria-label="סגירה">&times;</button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" aria-label="התמונה הקודמת">‹</button>
+    <img class="lightbox__image" src="" alt="" />
+    <button type="button" class="lightbox__nav lightbox__nav--next" aria-label="התמונה הבאה">›</button>
+    <span class="lightbox__counter"></span>
+    <div class="lightbox__dots"></div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/lightbox.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
