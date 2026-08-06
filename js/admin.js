@@ -56,6 +56,13 @@ function adminCardHtml(product) {
           />
         </label>
         <div class="admin-card__row">
+          <label class="category-select">
+            קטגוריה:
+            <select data-id="${product.id}" data-field="category">
+              <option value="sale" ${product.category !== "giveaway" ? "selected" : ""}>למכירה</option>
+              <option value="giveaway" ${product.category === "giveaway" ? "selected" : ""}>למסירה (בחינם)</option>
+            </select>
+          </label>
           <label class="sold-toggle">
             <input type="checkbox" data-id="${product.id}" data-field="sold" ${product.sold ? "checked" : ""} />
             סומן כנמכר
@@ -142,6 +149,12 @@ listEl.addEventListener("change", (e) => {
     if (!product) return;
     product.sold = target.checked;
     target.closest(".admin-card").classList.toggle("is-sold", product.sold);
+    persist();
+  } else if (target.dataset.field === "category") {
+    const product = findProduct(target.dataset.id);
+    if (!product) return;
+    if (target.value === "giveaway") product.category = "giveaway";
+    else delete product.category;
     persist();
   }
 });

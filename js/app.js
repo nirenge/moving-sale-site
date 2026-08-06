@@ -67,17 +67,27 @@ function renderCard(product) {
 }
 
 function renderProducts() {
-  const grid = document.getElementById("products-grid");
+  const saleGrid = document.getElementById("products-grid-sale");
+  const giveawaySection = document.getElementById("giveaway-section");
+  const giveawayGrid = document.getElementById("products-grid-giveaway");
   const products = getEffectiveProducts();
 
   productGalleries = {};
 
-  if (!products.length) {
-    grid.innerHTML = '<p class="empty-state">אין כרגע מוצרים להצגה.</p>';
-    return;
-  }
+  const saleProducts = products.filter((p) => p.category !== "giveaway");
+  const giveawayProducts = products.filter((p) => p.category === "giveaway");
 
-  grid.innerHTML = products.map(renderCard).join("");
+  saleGrid.innerHTML = saleProducts.length
+    ? saleProducts.map(renderCard).join("")
+    : '<p class="empty-state">אין כרגע מוצרים להצגה.</p>';
+
+  if (giveawayProducts.length) {
+    giveawaySection.hidden = false;
+    giveawayGrid.innerHTML = giveawayProducts.map(renderCard).join("");
+  } else {
+    giveawaySection.hidden = true;
+    giveawayGrid.innerHTML = "";
+  }
 }
 
 function openProductGallery(productId) {
@@ -88,12 +98,12 @@ function openProductGallery(productId) {
 document.addEventListener("DOMContentLoaded", () => {
   renderProducts();
 
-  const grid = document.getElementById("products-grid");
-  grid.addEventListener("click", (e) => {
+  const main = document.querySelector(".container");
+  main.addEventListener("click", (e) => {
     const wrap = e.target.closest(".card__image-wrap");
     if (wrap) openProductGallery(wrap.dataset.productId);
   });
-  grid.addEventListener("keydown", (e) => {
+  main.addEventListener("keydown", (e) => {
     if (e.key !== "Enter" && e.key !== " ") return;
     const wrap = e.target.closest(".card__image-wrap");
     if (!wrap) return;

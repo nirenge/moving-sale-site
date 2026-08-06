@@ -72,6 +72,22 @@ img {
   padding: 24px 16px 60px;
 }
 
+.section-block {
+  margin-bottom: 40px;
+}
+
+.section-block:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  margin: 0 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-border);
+  color: var(--color-text);
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -534,6 +550,23 @@ body.no-scroll {
   align-items: center;
   gap: 14px;
   margin-top: 4px;
+}
+
+.category-select {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.category-select select {
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 6px 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
 }
 
 .sold-toggle {

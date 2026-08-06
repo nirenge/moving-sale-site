@@ -12,14 +12,24 @@
     <div class="hero__content">
       <h1 class="hero__title">🏠 עוברים דירה - נפרדים מציוד</h1>
       <p class="hero__subtitle">
-        בעקבות מעבר דירה אנחנו מוכרים מגוון פריטים במצב מצוין. מוזמנים להציץ וליצור קשר 😊
+        בעקבות מעבר דירה אנחנו מוכרים ומוסרים מגוון פריטים במצב מצוין. מוזמנים להציץ וליצור קשר 😊
       </p>
     </div>
   </header>
 
   <main class="container">
-    <section id="products-grid" class="grid" aria-label="רשימת מוצרים">
-      <!-- המוצרים מוזרקים כאן דינמית ע"י js/app.js -->
+    <section class="section-block">
+      <h2 class="section-title">🛒 למכירה</h2>
+      <div id="products-grid-sale" class="grid" aria-label="פריטים למכירה">
+        <!-- המוצרים מוזרקים כאן דינמית ע"י js/app.js -->
+      </div>
+    </section>
+
+    <section class="section-block" id="giveaway-section" hidden>
+      <h2 class="section-title">🎁 למסירה ללא עלות</h2>
+      <div id="products-grid-giveaway" class="grid" aria-label="פריטים למסירה">
+        <!-- המוצרים מוזרקים כאן דינמית ע"י js/app.js -->
+      </div>
     </section>
   </main>
 
