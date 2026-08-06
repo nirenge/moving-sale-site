@@ -27,6 +27,11 @@ function renderCard(product) {
       ? `<li><span class="card__label">מידות:</span> ${escapeHtml(product.dimensions)}</li>`
       : "";
 
+  const descriptionRow =
+    product.description && product.description.trim()
+      ? `<p class="card__description">${escapeHtml(product.description)}</p>`
+      : "";
+
   return `
     <article class="card${soldClass}">
       <div
@@ -49,6 +54,7 @@ function renderCard(product) {
       <div class="card__body">
         <h3 class="card__title">${escapeHtml(product.name)}</h3>
         <p class="card__price">${escapeHtml(product.price)}</p>
+        ${descriptionRow}
         <ul class="card__details">
           ${dimensionsRow}
           <li><span class="card__label">מצב:</span> ${escapeHtml(product.condition)}</li>

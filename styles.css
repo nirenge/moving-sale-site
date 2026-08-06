@@ -208,6 +208,13 @@ img {
   font-weight: 600;
 }
 
+.card__description {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
 /* ===== מוצר שנמכר ===== */
 .card--sold {
   opacity: 0.65;

@@ -10,6 +10,7 @@
 //   availableDate - תאריך זמינות, כטקסט
 //   image         - נתיב לתמונה (יחסי לתיקיית הפרויקט)
 //   sold          - true / false
+//   description   - (אופציונלי) תיאור חופשי קצר, מוצג בכרטיס אם קיים
 
 const PRODUCTS = [
   {
@@ -129,6 +130,17 @@ const PRODUCTS = [
     condition: "חדש, באריזה מקורית וניילון",
     availableDate: "מיידי",
     image: "images/magnetic-board.jpg",
+    sold: true,
+  },
+  {
+    id: 14,
+    name: "מדיח כלים",
+    price: "1200 ₪",
+    dimensions: "",
+    condition: "חדש",
+    availableDate: "לעדכן",
+    image: "images/placeholder.svg",
+    description: "מדיח של BEKO, נקנה לפני 9 חודשים",
     sold: false,
   },
 ];

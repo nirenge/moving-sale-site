@@ -12,6 +12,7 @@ const FIELDS = [
   { key: "condition", label: "מצב הפריט" },
   { key: "availableDate", label: "תאריך זמינות" },
   { key: "image", label: "נתיב תמונה", full: true },
+  { key: "description", label: "תיאור (אופציונלי)", full: true },
 ];
 
 function fieldHtml(product, field) {
