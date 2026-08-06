@@ -143,7 +143,7 @@ const PRODUCTS = [
     "price": "1200 ₪",
     "dimensions": "",
     "condition": "חדש",
-    "availableDate": "לעדכן",
+    "availableDate": "16.08.26",
     "image": "images/dishwasher.jpg",
     "description": "מדיח של BEKO, נקנה לפני 9 חודשים",
     "sold": false
